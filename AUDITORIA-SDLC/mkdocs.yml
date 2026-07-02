@@ -1,0 +1,69 @@
+site_name: AstraLog III — Auditoría SDLC
+site_description: Auditoría del Ciclo de Vida del Desarrollo de Software (SDLC) del proyecto AstraLog III
+site_author: Equipo Auditor — Grupo 5, Ciclo VII G1
+
+theme:
+  name: material
+  language: es
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: deep-orange
+      accent: deep-orange
+      toggle:
+        icon: material/weather-night
+        name: Cambiar a modo oscuro
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: deep-orange
+      accent: deep-orange
+      toggle:
+        icon: material/weather-sunny
+        name: Cambiar a modo claro
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - toc.follow
+
+nav:
+  - Inicio: index.md
+  - Fase 1 — Preparar y Planificar: fases/fase-1.md
+  - Fase 2 — Describir el Desarrollo: fases/fase-2.md
+  - Fase 3 — Evaluar y Reportar:
+      - Matriz de Hallazgos: hallazgos/matriz-hallazgos.md
+      - Matriz de Riesgos: hallazgos/matriz-riesgos.md
+      - Informe Final de Auditoría: hallazgos/informe-final.md
+  - Fase 4 — Seguimiento:
+      - Plan de Acción Correctiva: fases/plan-accion-correctiva.md
+      - Acta de Cierre: fases/acta-cierre.md
+  - Discrepancias detectadas: discrepancias.md
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.details
+
+plugins:
+  - search

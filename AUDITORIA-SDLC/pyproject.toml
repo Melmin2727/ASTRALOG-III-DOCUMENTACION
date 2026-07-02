@@ -1,0 +1,10 @@
+[project]
+name = "auditoria-sdlc-astralog"
+version = "1.0.0"
+description = "Auditoria SDLC de AstraLog III"
+requires-python = ">=3.9"
+dependencies = [
+    "mkdocs==1.6.1",
+    "mkdocs-material==9.5.49",
+    "pymdown-extensions==10.12",
+]

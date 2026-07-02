@@ -1,0 +1,158 @@
+site_name: AstraLog III
+site_description: >-
+  Documentación técnica oficial del ecosistema AstraLog III (ASTRAMACO III):
+  backend, frontend, aplicación móvil y página publicitaria.
+site_author: Equipo AstraLog III
+copyright: "© 2026 AstraLog III — ASTRAMACO III, Juliaca, Puno, Perú"
+
+# Si despliegas en GitHub/GitLab Pages, ajusta site_url al dominio final, p.ej.:
+# site_url: https://<usuario>.github.io/<repo>/
+site_url: ""
+
+repo_name: AstraLog III
+# repo_url: https://github.com/elvisjsAtlas1/Backend-AstramacoIII
+
+theme:
+  name: material
+  language: es
+  icon:
+    repo: fontawesome/brands/git-alt
+  palette:
+    # Modo claro
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Cambiar a modo oscuro
+    # Modo oscuro
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Cambiar a modo claro
+  font:
+    text: Roboto
+    code: Roboto Mono
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.expand
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - navigation.footer
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
+    - content.tooltips
+
+plugins:
+  - search:
+      lang: es
+  - minify:
+      minify_html: true
+  - git-revision-date-localized:
+      enable_creation_date: true
+      type: date
+      fallback_to_build_date: true
+  - glightbox
+
+markdown_extensions:
+  # Admonitions ("notas", "advertencias", etc.)
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  # Resaltado de sintaxis y bloques de código con botón de copiar
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  # Pestañas de contenido
+  - pymdownx.tabbed:
+      alternate_style: true
+  # Emojis
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  # Listas de tareas
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  # Notas al pie
+  - footnotes
+  # Tablas y TOC
+  - tables
+  - toc:
+      permalink: true
+      title: En esta página
+  - attr_list
+  - md_in_html
+  - def_list
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.keys
+
+extra:
+  social:
+    - icon: fontawesome/solid/envelope
+      link: mailto:astramacoiiitransportistas@gmail.com
+  generator: false
+
+nav:
+  - Inicio: index.md
+  - Arquitectura:
+      - Visión general: arquitectura/general.md
+      - Arquitectura modular: arquitectura/modular.md
+      - Tecnologías utilizadas: arquitectura/tecnologias.md
+      - Base de datos: arquitectura/base-datos.md
+  - Backend:
+      - Visión general: backend/index.md
+      - Capas y paquetes: backend/capas-paquetes.md
+      - Modelo de dominio: backend/modelo-dominio.md
+      - Seguridad y JWT: backend/seguridad.md
+      - Auditoría: backend/auditoria.md
+      - Manejo de errores: backend/manejo-errores.md
+      - Configuración: backend/configuracion.md
+  - API:
+      - Introducción: api/index.md
+      - Autenticación: api/autenticacion.md
+      - Usuarios: api/usuarios.md
+      - Transportistas: api/transportistas.md
+      - Pedidos: api/pedidos.md
+      - Cargas: api/cargas.md
+      - Documentos personales: api/documentos.md
+      - Auditoría: api/auditoria.md
+  - Frontend:
+      - Visión general: frontend/index.md
+      - Arquitectura Angular: frontend/arquitectura.md
+      - Routing y guards: frontend/routing.md
+      - Servicios y consumo de API: frontend/servicios.md
+  - Aplicación móvil:
+      - Visión general: movil/index.md
+      - Arquitectura Android: movil/arquitectura.md
+      - Pantallas y navegación: movil/pantallas.md
+  - Página publicitaria: pagina-publicitaria.md
+  - Manuales:
+      - Manual del usuario: manuales/usuario.md
+      - Manual del desarrollador: manuales/desarrollador.md
+  - Instalación y despliegue:
+      - Instalación: instalacion.md
+      - Despliegue: despliegue.md
+  - Anexos:
+      - Discrepancias detectadas: anexos/discrepancias.md
